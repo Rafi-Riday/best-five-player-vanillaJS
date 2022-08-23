@@ -10,7 +10,11 @@ const inputFields = [calcFieldPerPlayer, calcFieldManager, calcFieldCoach];
 for (const inputField of inputFields) {
     inputField.addEventListener('keyup', function (event) {
         if (isNaN(event.target.value)) {
-            alert('Please enter valid Number');
+            document.getElementById('valid-input-error').classList.remove('hidden');
+            setTimeout(function () {
+                document.getElementById('valid-input-error').classList.add('hidden');
+            }, 5000)
+            // alert('Please enter valid Number');
             const fieldValueList = event.target.value.split('');
             const newValueList = [];
             for (const fieldvalue of fieldValueList) {
