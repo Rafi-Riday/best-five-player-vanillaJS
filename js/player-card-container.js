@@ -102,11 +102,8 @@ for (const player of players) {
     const cardActionContainer = document.createElement('div');
     cardActionContainer.classList.add('mt-5', 'card-actions', 'justify-end');
     const cardBtn = document.createElement('button');
-    cardBtn.classList.add('add-remove-action-btn', 'btn', 'btn-primary', 'btn-md', 'btn-circle', 'text-2xl', 'text-white', 'hover:text-white', 'disabled:bg-gray-500', 'px-3');
+    cardBtn.classList.add('add-remove-action-btn', 'btn', 'btn-primary', 'btn-md', 'btn-circle', 'text-2xl', 'text-white', 'hover:text-white', 'disabled:bg-gray-500', 'px-3', 'fa-solid', 'fa-plus');
     cardActionContainer.appendChild(cardBtn);
-    const cardPlusIcon = document.createElement('i');
-    cardPlusIcon.classList.add('fa-solid', 'fa-plus');
-    cardBtn.appendChild(cardPlusIcon);
     /*************************/
     cardBodyContainer.appendChild(cardActionContainer);
     /*************************/
