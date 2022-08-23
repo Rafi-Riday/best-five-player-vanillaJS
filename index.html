@@ -20,13 +20,22 @@
     <script>
         tailwind.config = {
             theme: {
+                // added custom device
+                screens: {
+                    'sm': '640px',
+                    'md': '768px',
+                    'lg': '1024px',
+                    '2lg': '1158px',
+                    'xl': '1280px',
+                    '2xl': '1536px',
+                },
                 extend: {
                     fontFamily: {
                         'berkshire': ['"Berkshire Swash"', 'cursive'],
                         'poppins': ['"Poppins"', 'sans-serif'],
                     },
                     colors: {
-                        tomato: '#ff3d00',
+                        tomato: '#ff4e55',
                     }
                 }
             }
@@ -34,14 +43,14 @@
     </script>
 </head>
 
-<body class="px-3 mx-auto xl:max-w-7xl font-poppins">
-    <header class="overflow-hidden py-5 md:py-10">
+<body class="font-poppins">
+    <header class="px-3 mx-auto xl:max-w-7xl overflow-hidden py-5 md:py-10">
         <div
             class="top-28 absolute mx-auto py-10 right-0 left-0 max-w-sm px-4 sm:px-0 sm:max-w-xl md:max-w-3xl grid grid-cols-2 gap-2 sm:gap-4 justify-items-center items-center bg-[#0008] rounded-xl">
             <h1 class="font-berkshire text-tomato col-span-2 text-[2.5rem] sm:text-6xl md:text-7xl">Rent Your Legend
             </h1>
             <h3 class="justify-self-end font-berkshire text-xl sm:text-2xl md:text-4xl">Build Your Team</h3>
-            <img class="justify-self-center w-1/2" src="img/design/title-underline.png" alt="">
+            <img class="justify-self-center w-1/2" src="img/design/title-underline.webp" alt="">
         </div>
         <div class="w-full flex flex-row">
             <img class="mx-auto basis-2/12" src="img/cup/fifa-world-cup-trophy.webp" alt="fifa-world-cup-trophy">
@@ -50,13 +59,37 @@
                 alt="european-champion-clubs'-cup">
         </div>
     </header>
-    <main class="flex flex-row gap-5">
-        <!-- <main class="hidden"> -->
+
+    <main class="px-3 mx-auto xl:max-w-7xl flex flex-row gap-5">
         <section
-            class="sm:basis-1/2 lg:basis-7/12 xl:basis-4/6 grow grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+            class="sm:basis-1/2 lg:basis-7/12 xl:basis-4/6 grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <article class="card w-full glass bg-[#fff2] hover:bg-[#fff1]">
                 <figure><img class="w-full" src="img/players/iker-casillas.webp"></figure>
-                <div class="card-body">
+                <div class="card-body p-2">
+                    <div
+                        class="grid grid-cols-12 gap-y-4 justify-items-center items-center text-2xl md:text-xl 2lg:text-2xl">
+                        <img class="col-span-2 w-[2em] h-[2em]" src="img/club/psg.webp" alt="psg">
+                        <div class="col-span-8 text-xs text-center">
+                            <div class="flex flex-col justify-items-center text-center text-gray-200">
+                                <span>clean_sheets: 424</span>
+                                <i class="fa-solid fa-circle text-[0.5em]"></i>
+                                <span>goals_conceded: 801</span>
+                            </div>
+                        </div>
+                        <img class="col-span-2 justify-self-end w-[2em] h-[2em]" src="img/position/forward.webp"
+                            alt="forward">
+                        <h2 class="col-span-12 text-center font-extrabold text-white">Zlatan Ibrahimovic</h2>
+                        <div class="col-span-4">
+                            <img class="w-[4em]" src="img/achievements/english-champion.webp">
+                        </div>
+                        <div class="col-span-4">
+                            <img class="w-[4em]" src="img/achievements/english-champion.webp">
+                        </div>
+                        <div class="col-span-4">
+                            <img class="w-[4em]" src="img/achievements/english-champion.webp">
+                        </div>
+                    </div>
+                    <!--  -->
                     <div class="card-actions justify-end">
                         <button
                             class="btn btn-primary btn-md btn-circle text-2xl text-white hover:text-white disabled:bg-gray-500 px-3">
@@ -193,18 +226,47 @@
             </label>
         </section>
         <!--  -->
-        <aside class="sm:basis-1/2 lg:basis-5/12 xl:basis-2/6 hidden sm:block grow-0 calculation-container">
-            <section class="sm:sticky sm:top-0 border-white border-2">
-                <div class="p-0 sm:p-1 md:p-4 lg:p-8 text-center">
-                    sample text sample text sample text sample text sample text sample text sample text sample text
-                    sample text sample text sample text sample text sample text sample text sample text sample text
-                    sample text sample text sample text sample text sample text sample text sample text sample text
-                    sample text sample text sample text sample text sample text sample text sample text sample text
-                    sample text sample text sample text sample text sample text sample text sample text sample text
-                    sample text sample text sample text sample text sample text sample text sample text sample text
-                </div>
-                <div class="flex flex-row gap-2 sm:gap-4 p-0 sm:p-1 md:p-4 lg:p-8">
-                    <span class="grow-0">Input : </span><input class="grow w-2/4 text-black" type="text">
+        <aside
+            class="max-w-[250px] sm:basis-1/2 lg:basis-5/12 xl:basis-2/6 hidden sm:block grow-0 calculation-container">
+            <section class="max-w-[250px] mt-0 sm:mt-5 md:mt-10 sm:sticky sm:top-4 md:top-6">
+                <div class="grid grid-cols-1 gap-4 justify-items-center items-center">
+                    <div class="flex flex-col w-7/12 text-center">
+                        <div class="basis-3/4 text-2xl font-berkshire">Selected - V</div>
+                        <img class="basis-1/4" src="img/design/heading-underline.webp" alt="heading-underline">
+                    </div>
+                    <div class="w-10/12 border-2 border-white">
+                        <ol class="list-decimal">
+                            <li>Lionel Messi xx</li>
+                            <li>Lionel Messi xx</li>
+                            <li>Lionel Messi xx</li>
+                        </ol>
+                    </div>
+                    <div class="flex flex-col w-6/12 text-center">
+                        <div class="basis-3/4 text-2xl font-berkshire">Budget</div>
+                        <img class="basis-1/4" src="img/design/heading-underline.webp" alt="heading-underline">
+                    </div>
+                    <div class="flex flex-row gap-2 sm:gap-4 w-full">
+                        <span class="grow">Per Player</span><input
+                            class="grow-0 w-2/4 bg-transparent border-2 border-white px-2" type="text">
+                    </div>
+                    <button class="bg-sky-700 py-3 rounded-lg w-full">Calculate</button>
+                    <div class="flex flex-row gap-2 sm:gap-4 w-full">
+                        <span class="grow basis-7/12">Player Expenses</span>
+                        <div class="grow-0 basis-5/12 text-right">00</div>
+                    </div>
+                    <div class="flex flex-row gap-2 sm:gap-4 w-full">
+                        <span class="grow">Manager</span><input
+                            class="grow-0 w-2/4 bg-transparent border-2 border-white px-2" type="text">
+                    </div>
+                    <div class="flex flex-row gap-2 sm:gap-4 w-full">
+                        <span class="grow">Coach</span><input
+                            class="grow-0 w-2/4 bg-transparent border-2 border-white px-2" type="text">
+                    </div>
+                    <button class="bg-sky-700 py-3 rounded-lg w-full">Calculate Total</button>
+                    <div class="flex flex-row gap-2 sm:gap-4 w-full">
+                        <span class="grow">Total</span>
+                        <div class="grow-0 w-2/4 text-right text-tomato" type="text">00</div>
+                    </div>
                 </div>
             </section>
         </aside>
@@ -213,9 +275,8 @@
     <!-- modal: Putted here as the last element so it can be visible for most upper layout -->
     <input type="checkbox" id="modal-register" class="modal-toggle" />
     <label for="modal-register" class="modal modal-bottom md:modal-middle cursor-pointer">
-        <label
-            class="modal-box relative glass bg-transparent hover:bg-transparent flex flex-col justify-center items-center gap-2">
-            <label for="modal-register" class="btn btn-sm btn-circle absolute right-2 top-2 text-white bg-red-500">
+        <label class="modal-box relative glass bg-black hover:bg-black flex flex-col justify-center items-center gap-2">
+            <label for="modal-register" class="btn btn-sm btn-circle absolute right-2 top-2 text-white bg-tomato">
                 <i class="fa-solid fa-xmark"></i>
             </label>
             <!-- content -->
