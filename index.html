@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Five Dom</title>
+    <title>Home | Build Your Team</title>
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,26 +85,29 @@
                         <img class="basis-1/4" src="img/design/heading-underline.webp" alt="heading-underline">
                     </div>
                     <div class="flex flex-row gap-2 sm:gap-4 w-full">
-                        <span class="grow">Per Player</span><input
-                            class="grow-0 w-2/4 bg-transparent border-2 border-white px-2" type="text">
+                        <span class="grow">Per Player</span>
+                        <input id="calc-field-per-player" class="grow-0 w-2/4 bg-transparent border-2 border-white px-2"
+                            type="text">
                     </div>
-                    <button class="bg-sky-700 py-3 rounded-lg w-full">Calculate</button>
+                    <button id="calculate" class="bg-sky-700 py-3 rounded-lg w-full">Calculate</button>
                     <div class="flex flex-row gap-2 sm:gap-4 w-full">
                         <span class="grow basis-7/12">Player Expenses</span>
-                        <div class="grow-0 basis-5/12 text-right">00</div>
+                        <div id="player-expenses-value" class="grow-0 basis-5/12 text-right">00</div>
                     </div>
                     <div class="flex flex-row gap-2 sm:gap-4 w-full">
-                        <span class="grow">Manager</span><input
-                            class="grow-0 w-2/4 bg-transparent border-2 border-white px-2" type="text">
+                        <span class="grow">Manager</span>
+                        <input id="calc-field-manager" class="grow-0 w-2/4 bg-transparent border-2 border-white px-2"
+                            type="text">
                     </div>
                     <div class="flex flex-row gap-2 sm:gap-4 w-full">
-                        <span class="grow">Coach</span><input
-                            class="grow-0 w-2/4 bg-transparent border-2 border-white px-2" type="text">
+                        <span class="grow">Coach</span>
+                        <input id="calc-field-coach" class="grow-0 w-2/4 bg-transparent border-2 border-white px-2"
+                            type="text">
                     </div>
-                    <button class="bg-sky-700 py-3 rounded-lg w-full">Calculate Total</button>
+                    <button id="calculate-total" class="bg-sky-700 py-3 rounded-lg w-full">Calculate Total</button>
                     <div class="flex flex-row gap-2 sm:gap-4 w-full">
                         <span class="grow">Total</span>
-                        <div class="grow-0 w-2/4 text-right text-tomato" type="text">00</div>
+                        <div id="total-expenses-value" class="grow-0 w-2/4 text-right text-tomato" type="text">00</div>
                     </div>
                 </div>
             </section>

@@ -3,6 +3,10 @@ const playerCurrentOl = document.getElementById('players-list');
 for (let i = 0; i < players.length; i++) {
     const player = players[i];
     addRemoveActionBtnList[i].addEventListener('click', function (event) {
+        if (playerCurrentOl.children.length >= 5) {
+            alert('Cant add more than 5 Players');
+            return;
+        }
         const newPlayerListItem = document.createElement('li');
         newPlayerListItem.classList.add('ml-5', 'py-2', 'text-sm');
         newPlayerListItem.setAttribute('data-player-serial', i);
