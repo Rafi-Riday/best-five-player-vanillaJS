@@ -13,7 +13,7 @@ for (const inputField of inputFields) {
             document.getElementById('valid-input-error').classList.remove('hidden');
             setTimeout(function () {
                 document.getElementById('valid-input-error').classList.add('hidden');
-            }, 4000)
+            }, 1000)
             // alert('Please enter valid Number');
             const fieldValueList = event.target.value.split('');
             const newValueList = [];

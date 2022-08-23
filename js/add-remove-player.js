@@ -10,6 +10,10 @@ for (let i = 0; i < players.length; i++) {
             }, 4000)
             return;
         }
+        document.getElementById('player-add').classList.remove('hidden');
+        setTimeout(function () {
+            document.getElementById('player-add').classList.add('hidden');
+        }, 4000)
         const newPlayerListItem = document.createElement('li');
         newPlayerListItem.classList.add('ml-5', 'py-1', 'sm:py-2', 'text-sm');
         newPlayerListItem.setAttribute('data-player-serial', i);
