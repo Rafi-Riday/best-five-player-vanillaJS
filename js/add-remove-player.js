@@ -4,7 +4,10 @@ for (let i = 0; i < players.length; i++) {
     const player = players[i];
     addRemoveActionBtnList[i].addEventListener('click', function (event) {
         if (playerCurrentOl.children.length >= 5) {
-            alert('Cant add more than 5 Players');
+            document.getElementById('player-add-error').classList.remove('hidden');
+            setTimeout(function () {
+                document.getElementById('player-add-error').classList.add('hidden');
+            }, 5000)
             return;
         }
         const newPlayerListItem = document.createElement('li');
