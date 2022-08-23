@@ -33,9 +33,20 @@ function returnNumberOnly(str) {
     }
 }
 
+function leadingZero(number) {
+    if (parseFloat(number) < 10) {
+        return '0' + number;
+    }
+    else {
+        return number;
+    }
+}
+
 function calculation() {
     playerExpensesValue.innerText = parseFloat(returnNumberOnly(calcFieldPerPlayer.value)) * playerCurrentOl.children.length;
     totalExpensesValue.innerText = returnNumberOnly(playerExpensesValue.innerText) + returnNumberOnly(calcFieldManager.value) + returnNumberOnly(calcFieldCoach.value);
+    playerExpensesValue.innerText = leadingZero(playerExpensesValue.innerText);
+    totalExpensesValue.innerText = leadingZero(totalExpensesValue.innerText);
 }
 calculateBtn.addEventListener('click', calculation)
 calculateTotalBtn.addEventListener('click', calculation)

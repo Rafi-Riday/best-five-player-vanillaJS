@@ -8,7 +8,7 @@ for (let i = 0; i < players.length; i++) {
             return;
         }
         const newPlayerListItem = document.createElement('li');
-        newPlayerListItem.classList.add('ml-5', 'py-2', 'text-sm');
+        newPlayerListItem.classList.add('ml-5', 'py-1', 'sm:py-2', 'text-sm');
         newPlayerListItem.setAttribute('data-player-serial', i);
         newPlayerListItem.innerText = player.name;
         const removeParentItem = document.createElement('i');

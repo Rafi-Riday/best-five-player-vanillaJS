@@ -11,7 +11,7 @@ for (const player of players) {
     const cardTitleImg = document.createElement('img');
     cardTitleImg.classList.add('w-full');
     //
-    cardTitleImg.setAttribute('src', 'img/players/' + formatStringToImgSrc(player.name) + '.webp');
+    cardTitleImg.setAttribute('src', 'img/players/' + formatStringToImgSrc(player.name) + '.jpg');
     cardFigure.appendChild(cardTitleImg);
     card.appendChild(cardFigure);
     /*************************/

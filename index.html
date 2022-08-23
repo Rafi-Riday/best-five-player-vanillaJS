@@ -69,8 +69,8 @@
         <!--  -->
         <aside
             class="max-w-[250px] sm:basis-1/2 lg:basis-5/12 xl:basis-2/6 hidden sm:block grow-0 calculation-container">
-            <section class="max-w-[250px] mt-20 sm:mt-5 md:mt-10 sm:sticky sm:top-4 md:top-6">
-                <div class="grid grid-cols-1 gap-4 justify-items-center items-center">
+            <section class="max-w-[250px] mt-0 sm:mt-5 md:mt-10 sm:sticky sm:top-4 md:top-6">
+                <div class="grid grid-cols-1 gap-2 sm:gap-4 justify-items-center items-center">
                     <div class="flex flex-col w-7/12 text-center">
                         <div class="basis-3/4 text-2xl font-berkshire">Selected - V</div>
                         <img class="basis-1/4" src="img/design/heading-underline.webp" alt="heading-underline">
@@ -86,28 +86,31 @@
                     </div>
                     <div class="flex flex-row gap-2 sm:gap-4 w-full">
                         <span class="grow">Per Player</span>
-                        <input id="calc-field-per-player" class="grow-0 w-2/4 bg-transparent border-2 border-white px-2"
-                            type="text">
+                        <input placeholder="00" id="calc-field-per-player"
+                            class="grow-0 w-2/4 bg-transparent border-2 border-white px-2" type="text">
                     </div>
                     <button id="calculate" class="bg-sky-700 py-3 rounded-lg w-full">Calculate</button>
-                    <div class="flex flex-row gap-2 sm:gap-4 w-full">
-                        <span class="grow basis-7/12">Player Expenses</span>
-                        <div id="player-expenses-value" class="grow-0 basis-5/12 text-right">00</div>
+                    <div class="flex flex-row gap-2 sm:gap-4 w-full my-2">
+                        <span class="grow basis-7/12 font-extrabold">Player Expenses</span>
+                        <div id="player-expenses-value" class="grow-0 basis-5/12 text-xl font-extrabold text-right">00
+                        </div>
                     </div>
                     <div class="flex flex-row gap-2 sm:gap-4 w-full">
                         <span class="grow">Manager</span>
-                        <input id="calc-field-manager" class="grow-0 w-2/4 bg-transparent border-2 border-white px-2"
-                            type="text">
+                        <input placeholder="00" id="calc-field-manager"
+                            class="grow-0 w-2/4 bg-transparent border-2 border-white px-2" type="text">
                     </div>
                     <div class="flex flex-row gap-2 sm:gap-4 w-full">
                         <span class="grow">Coach</span>
-                        <input id="calc-field-coach" class="grow-0 w-2/4 bg-transparent border-2 border-white px-2"
-                            type="text">
+                        <input placeholder="00" id="calc-field-coach"
+                            class="grow-0 w-2/4 bg-transparent border-2 border-white px-2" type="text">
                     </div>
                     <button id="calculate-total" class="bg-sky-700 py-3 rounded-lg w-full">Calculate Total</button>
                     <div class="flex flex-row gap-2 sm:gap-4 w-full">
-                        <span class="grow">Total</span>
-                        <div id="total-expenses-value" class="grow-0 w-2/4 text-right text-tomato" type="text">00</div>
+                        <span class="grow text-xl font-extrabold">Total</span>
+                        <div id="total-expenses-value"
+                            class="grow-0 w-2/4 text-xl font-extrabold text-right text-tomato" type="text">
+                            00</div>
                     </div>
                 </div>
             </section>
@@ -117,7 +120,8 @@
     <!-- modal: Putted here as the last element so it can be visible for most upper layout -->
     <input type="checkbox" id="modal-register" class="modal-toggle" />
     <label for="modal-register" class="modal modal-bottom md:modal-middle cursor-pointer">
-        <label class="modal-box relative glass bg-black hover:bg-black flex flex-col justify-center items-center gap-2">
+        <label
+            class="modal-box relative glass bg-black hover:bg-black flex flex-col justify-center items-center gap-2 mt-0">
             <label for="modal-register"
                 class="btn btn-sm btn-circle right-2 sticky top-1 left-full text-white bg-tomato">
                 <i class="fa-solid fa-xmark"></i>
