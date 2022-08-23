@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Five Dom</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Poppins&display=swap" rel="stylesheet">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/b9f92f6b81.js" crossorigin="anonymous"></script>
     <!-- DaisyUI -->
@@ -16,8 +21,12 @@
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        'berkshire': ['"Berkshire Swash"', 'cursive'],
+                        'poppins': ['"Poppins"', 'sans-serif'],
+                    },
                     colors: {
-                        clifford: '#da373d',
+                        tomato: '#ff3d00',
                     }
                 }
             }
@@ -25,11 +34,24 @@
     </script>
 </head>
 
-<body class="px-3 mx-auto">
-    <header>
-        <h1>Best Five Dom</h1>
+<body class="px-3 mx-auto xl:max-w-7xl font-poppins">
+    <header class="overflow-hidden py-5 md:py-10">
+        <div
+            class="top-28 absolute mx-auto py-10 right-0 left-0 max-w-sm px-4 sm:px-0 sm:max-w-xl md:max-w-3xl grid grid-cols-2 gap-2 sm:gap-4 justify-items-center items-center bg-[#0008] rounded-xl">
+            <h1 class="font-berkshire text-tomato col-span-2 text-[2.5rem] sm:text-6xl md:text-7xl">Rent Your Legend
+            </h1>
+            <h3 class="justify-self-end font-berkshire text-xl sm:text-2xl md:text-4xl">Build Your Team</h3>
+            <img class="justify-self-center w-1/2" src="img/design/title-underline.png" alt="">
+        </div>
+        <div class="w-full flex flex-row">
+            <img class="mx-auto basis-2/12" src="img/cup/fifa-world-cup-trophy.webp" alt="fifa-world-cup-trophy">
+            <div class="hidden sm:block basis-8/12"></div>
+            <img class="hidden sm:block mx-auto basis-2/12" src="img/cup/european-champion-clubs-cup.webp"
+                alt="european-champion-clubs'-cup">
+        </div>
     </header>
     <main class="flex flex-row gap-5">
+        <!-- <main class="hidden"> -->
         <section
             class="sm:basis-1/2 lg:basis-7/12 xl:basis-4/6 grow grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
             <article class="card w-full glass bg-[#fff2] hover:bg-[#fff1]">
