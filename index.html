@@ -61,69 +61,31 @@
     </header>
 
     <main class="px-3 mx-auto xl:max-w-7xl flex flex-row gap-5">
-        <section
-            class="player-cards sm:basis-1/2 lg:basis-7/12 xl:basis-4/6 grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <section id="player-card-container"
+            class="sm:basis-1/2 lg:basis-7/12 xl:basis-4/6 grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <!-- player cards -->
-            <!-- <article class="card w-full glass bg-[#fff2] hover:bg-[#fff1]">
-                <figure><img class="w-full" src="img/players/iker-casillas.webp"></figure>
-                <div class="card-body p-2">
-                    <div
-                        class="grid grid-cols-12 gap-y-4 justify-items-center items-center text-2xl md:text-xl 2lg:text-2xl">
-                        <img class="col-span-2 w-[2em] h-[2em]" src="img/club/psg.webp" alt="psg">
-                        <div class="col-span-8 text-xs text-center">
-                            <div class="flex flex-col justify-items-center text-center text-gray-200">
-                                <span>clean_sheets: 424</span>
-                                <i class="fa-solid fa-circle text-[0.5em]"></i>
-                                <span>goals_conceded: 801</span>
-                            </div>
-                        </div>
-                        <img class="col-span-2 justify-self-end w-[2em] h-[2em]" src="img/position/forward.webp"
-                            alt="forward">
-                        <h2 class="col-span-12 text-center font-extrabold text-white">Zlatan Ibrahimovic</h2>
-                        <div class="col-span-4 indicator">
-                            <span
-                                class="indicator-item indicator-bottom translate-x-0 badge badge-lg text-white font-bold bg-[#0008]">2x</span>
-                            <img class="w-[4em]" src="img/achievements/english-fa-cup-winner.webp">
-                        </div>
-                        <div class="col-span-4 indicator">
-                            <span
-                                class="indicator-item indicator-bottom translate-x-0 badge badge-lg text-white font-bold bg-[#0008]">2x</span>
-                            <img class="w-[4em]" src="img/achievements/english-champion.webp">
-                        </div>
-                        <div class="col-span-4 indicator">
-                            <span
-                                class="indicator-item indicator-bottom translate-x-0 badge badge-lg text-white font-bold bg-[#0008]">2x</span>
-                            <img class="w-[4em]" src="img/achievements/fifa-club-world-cup-winner.webp">
-                        </div>
-                    </div>
-                    <div class="mt-5 card-actions justify-end">
-                        <button
-                            class="btn btn-primary btn-md btn-circle text-2xl text-white hover:text-white disabled:bg-gray-500 px-3">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-            </article> -->
-            <!-- <br>
-            <label for="modal-register"
-                class="btn btn-info btn-lg btn-circle text-2xl sm:hidden modal-button sticky bottom-3 left-full">
-                <i class="fa-solid fa-bars-progress"></i>
-            </label> -->
+            <!-- calculation container for phn -->
         </section>
         <!--  -->
         <aside
             class="max-w-[250px] sm:basis-1/2 lg:basis-5/12 xl:basis-2/6 hidden sm:block grow-0 calculation-container">
-            <section class="max-w-[250px] mt-0 sm:mt-5 md:mt-10 sm:sticky sm:top-4 md:top-6">
+            <section class="max-w-[250px] mt-20 sm:mt-5 md:mt-10 sm:sticky sm:top-4 md:top-6">
                 <div class="grid grid-cols-1 gap-4 justify-items-center items-center">
                     <div class="flex flex-col w-7/12 text-center">
                         <div class="basis-3/4 text-2xl font-berkshire">Selected - V</div>
                         <img class="basis-1/4" src="img/design/heading-underline.webp" alt="heading-underline">
                     </div>
-                    <div class="w-10/12 border-2 border-white">
-                        <ol class="list-decimal">
-                            <li>Lionel Messi xx</li>
-                            <li>Lionel Messi xx</li>
-                            <li>Lionel Messi xx</li>
+                    <div class="w-10/12 py-2">
+                        <ol id="players-list" class="list-decimal">
+                            <li class="ml-10 py-2 text-lg">Lionel Messi<i
+                                    class="btn bg-tomato text-white btn-sm rounded-lg ml-2 fa-solid fa-xmark remove-parent"></i>
+                            </li>
+                            <li class="ml-10 py-2 text-lg">Lionel Messi<i
+                                    class="btn bg-tomato text-white btn-sm rounded-lg ml-2 fa-solid fa-xmark remove-parent"></i>
+                            </li>
+                            <li class="ml-10 py-2 text-lg">Lionel Messi<i
+                                    class="btn bg-tomato text-white btn-sm rounded-lg ml-2 fa-solid fa-xmark remove-parent"></i>
+                            </li>
                         </ol>
                     </div>
                     <div class="flex flex-col w-6/12 text-center">
@@ -161,7 +123,8 @@
     <input type="checkbox" id="modal-register" class="modal-toggle" />
     <label for="modal-register" class="modal modal-bottom md:modal-middle cursor-pointer">
         <label class="modal-box relative glass bg-black hover:bg-black flex flex-col justify-center items-center gap-2">
-            <label for="modal-register" class="btn btn-sm btn-circle absolute right-2 top-2 text-white bg-tomato">
+            <label for="modal-register"
+                class="btn btn-sm btn-circle right-2 sticky top-1 left-full text-white bg-tomato">
                 <i class="fa-solid fa-xmark"></i>
             </label>
             <!-- content -->
@@ -172,91 +135,11 @@
     </label>
 
     <script src="js/info.js"></script>
-    <script>
-        /***************************************************************/
-        // calculation container switcher
-        const logic = 640;
-        let isMobilePhone;
-        if (document.documentElement.clientWidth >= logic) {
-            isMobilePhone = false;
-        }
-        else {
-            isMobilePhone = true;
-        }
-        function swapContainer(className) {
-            const classList = document.getElementsByClassName(className);
-            const itemA = classList[0].children[0];
-            const itemB = classList[1].children[0];
-            classList[0].removeChild(itemA);
-            classList[1].removeChild(itemB);
-            classList[0].appendChild(itemB);
-            classList[1].appendChild(itemA);
-        }
-        if (isMobilePhone === true) {
-            swapContainer('calculation-container');
-        }
-        window.addEventListener('resize', function (event) {
-            const winWidth = document.documentElement.clientWidth;
-            if (winWidth >= logic && isMobilePhone === true) {
-                isMobilePhone = false;
-                swapContainer('calculation-container');
-            }
-            else if (winWidth < logic && isMobilePhone === false) {
-                isMobilePhone = true;
-                swapContainer('calculation-container');
-            }
-        })
-        /***************************************************************/
-        const card = (`
-        <article class="card w-full glass bg-[#fff2] hover:bg-[#fff1]">
-                <figure><img class="w-full" src="img/players/iker-casillas.webp"></figure>
-                <div class="card-body p-2">
-                    <div
-                        class="grid grid-cols-12 gap-y-4 justify-items-center items-center text-2xl md:text-xl 2lg:text-2xl">
-                        <img class="col-span-2 w-[2em] h-[2em]" src="img/club/psg.webp" alt="psg">
-                        <div class="col-span-8 text-xs text-center">
-                            <div class="flex flex-col justify-items-center text-center text-gray-200">
-                                <span>clean_sheets: 424</span>
-                                <i class="fa-solid fa-circle text-[0.5em]"></i>
-                                <span>goals_conceded: 801</span>
-                            </div>
-                        </div>
-                        <img class="col-span-2 justify-self-end w-[2em] h-[2em]" src="img/position/forward.webp"
-                            alt="forward">
-                        <h2 class="col-span-12 text-center font-extrabold text-white">Zlatan Ibrahimovic</h2>
-                        <div class="col-span-4 indicator">
-                            <span
-                                class="indicator-item indicator-bottom translate-x-0 badge badge-lg text-white font-bold bg-[#0008]">2x</span>
-                            <img class="w-[4em]" src="img/achievements/english-fa-cup-winner.webp">
-                        </div>
-                        <div class="col-span-4 indicator">
-                            <span
-                                class="indicator-item indicator-bottom translate-x-0 badge badge-lg text-white font-bold bg-[#0008]">2x</span>
-                            <img class="w-[4em]" src="img/achievements/english-champion.webp">
-                        </div>
-                        <div class="col-span-4 indicator">
-                            <span
-                                class="indicator-item indicator-bottom translate-x-0 badge badge-lg text-white font-bold bg-[#0008]">2x</span>
-                            <img class="w-[4em]" src="img/achievements/fifa-club-world-cup-winner.webp">
-                        </div>
-                    </div>
-                    <div class="mt-5 card-actions justify-end">
-                        <button
-                            class="btn btn-primary btn-md btn-circle text-2xl text-white hover:text-white disabled:bg-gray-500 px-3">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-            </article>
-        `);
-        for (i = 1; i <= 12; i++) {
-            const playerCard = document.createElement('div');
-            playerCard.innerHTML = card;
-            const secTion = document.getElementsByTagName('section')[0];
-            console.log(secTion.children);
-            secTion.appendChild(playerCard);
-        }
-    </script>
+    <script src="js/utilities.js"></script>
+    <script src="js/player-card-container.js"></script>
+    <script src="js/device-detection.js"></script>
+    <script src="js/add-remove-player.js"></script>
+    <script src="js/calculation.js"></script>
 </body>
 
 </html>
