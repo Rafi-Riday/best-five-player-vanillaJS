@@ -1,10 +1,12 @@
 const playerCardContainer = document.getElementById('player-card-container');
 /**
  * for loop starts : player cards with real information
+ * 
+ * I used this strange creating & updating DOM just to explore.
  */
 for (const player of players) {
     const card = document.createElement('article');
-    card.classList.add('class', 'card', 'w-full', 'glass', 'bg-[#fff2]', 'hover:bg-[#fff1]');
+    card.classList.add('class', 'card', 'w-full', 'bg-[#fff2]', 'hover:bg-[#fff1]');
     playerCardContainer.appendChild(card);
     /*************************/
     const cardFigure = document.createElement('figure');
@@ -52,9 +54,9 @@ for (const player of players) {
     //
     careerText1.innerText = playerCareerInfo[0][0] + ' : ' + playerCareerInfo[0][1];
     careerTextContainer.appendChild(careerText1);
-    const careerIconicDevider = document.createElement('i');
-    careerIconicDevider.classList.add('fa-solid', 'fa-circle', 'text-[0.5em]');
-    careerTextContainer.appendChild(careerIconicDevider);
+    const careerIconicDivider = document.createElement('i');
+    careerIconicDivider.classList.add('fa-solid', 'fa-circle', 'text-[0.5em]');
+    careerTextContainer.appendChild(careerIconicDivider);
     const careerText2 = document.createElement('span');
     //
     careerText2.innerText = playerCareerInfo[1][0] + ' : ' + playerCareerInfo[1][1];
